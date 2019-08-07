@@ -2,6 +2,10 @@ package com.bridgelab.programming.algorithm;
 
 import java.util.Scanner;
 
+
+
+
+
 public class Input {
 	private static Scanner sc = new Scanner(System.in);
 
@@ -19,4 +23,7 @@ public class Input {
   public static double inputDouble() {
 	  return sc.nextDouble();
   }
+
+
+
 }
