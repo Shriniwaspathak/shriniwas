@@ -3,7 +3,7 @@ package com.bridgelab.programming.datastructure;
 import java.util.Scanner;
 
 public class Banking {
-	Queue queue = new Queue();
+	//Queue queue = new Queue();
 
 	public static void main(String arg[]) {
 		Queue queue = new Queue();

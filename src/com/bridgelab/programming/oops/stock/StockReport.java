@@ -21,6 +21,7 @@ public class StockReport {
 	int number=sc.nextInt();
 //	int number=Input.inputInteger();
 	StockPortfolio sfolio=new StockPortfolio();
+	StockImplementation stockimplementation= new StockImplementation();
 	for(int i=0;i<number;i++) {
 		
 		System.out.println("enter the name of stock :");
@@ -34,21 +35,24 @@ public class StockReport {
 	  
 	      sfolio.setStockname(stockname);
 	      sfolio.setNumberofshare(numberofstock);
+	      int amount=sfolio.getNumberofshare();
 	      sfolio.setSharePrice(sprice);
 	      stockObject.add(sfolio); 
 	
-	    System.out.println();
 	}	
-	StockImplementation stockimplementation= new StockImplementation();
 	stockimplementation.addToJson(stockObject);
-	long totalprice=0;
+	System.out.println(stockObject);
+		 long totalprice=0; 
 	
-	List<StockPortfolio> stockportfolioObjects=stockimplementation.readFromJson();
-	for(StockPortfolio stock:stockportfolioObjects) {
-		System.out.println(stock.getStockname()+" "+stock.getNumberofshare()+" "+stock.getSharePrice());
-		//System.out.println(stockportfolioObjects);
 		
-	}
+		  List<StockPortfolio>
+		  stockportfolioObjects=stockimplementation.readFromJson(); for(StockPortfolio
+		  stock:stockportfolioObjects) {
+		  System.out.println(stock.getStockname()+" "+stock.getNumberofshare()+" "
+		  ); System.out.println(stockportfolioObjects);
+		   totalprice=totalprice+stock.getSharePrice();
+		  }
+		 
 	System.out.println("total stock value"+totalprice);
 }
 }

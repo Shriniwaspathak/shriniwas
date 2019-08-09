@@ -18,10 +18,10 @@ public class StockImplementation {
 	public void addToJson(List<StockPortfolio> stockObject)
 			throws JsonGenerationException, JsonMappingException, IOException {
 
-		mapper.writeValue(new File("C:\\Users\\Shriniwas Pathak\\Desktop\\stock.json"), stockObject);
+		mapper.writeValue(new File("C:\\Users\\Shriniwas Pathak\\eclipse-workspace\\BridgeLab\\check.json"), stockObject);
 	}
-
-	File file = new File("C:\\Users\\Shriniwas Pathak\\Desktop\\stock.json");
+           
+	File file = new File("C:\\Users\\Shriniwas Pathak\\eclipse-workspace\\BridgeLab\\check.json");
 	TypeReference<List<StockPortfolio>> typereference = new TypeReference<List<StockPortfolio>>() {
 	};
 
